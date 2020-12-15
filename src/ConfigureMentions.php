@@ -50,7 +50,7 @@ class ConfigureMentions
         $tag->filterChain->prepend([static::class, 'addUserId'])
             ->setJS('function(tag) { return flarum.extensions["kyrne-evergreen"].filterUserMentions(tag); }');
 
-        $config->Preg->match('/\B@(?<username>[a-z0-9_-]+)(?!#)/i', $tagName);
+        $config->Preg->match('/\B@(?<username>[-_a-zA-Z0-9\x7f-\xff]+)#(?<id>\d+)/i', $tagName);
     }
 
     /**
