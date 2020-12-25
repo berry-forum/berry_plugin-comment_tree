@@ -52,7 +52,7 @@ export default function MakeTree() {
         Button.component({
           className: 'Button Button--link Evergreen--show',
           icon: 'fas fa-caret-down',
-          children: app.translator.trans('kyrne-evergreen.forum.post.show_' + (count > 1 ? 'replies' : 'reply'), {count}),
+          children: app.translator.trans('starinc-nex_comment-tree.forum.post.show_' + (count > 1 ? 'replies' : 'reply'), {count}),
           onclick: () => {
             app.store.find('trees', id, {include: include.replace(/,\s*$/, "")})
               .then(response => {

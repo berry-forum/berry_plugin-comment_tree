@@ -1,11 +1,12 @@
 {
-    "name": "kyrne/evergreen",
-    "description": "1 level reply trees for Flarum.",
+    "name": "starinc/nex_comment-tree",
+    "description": "Comment trees for Nex.",
     "keywords": [
-        "flarum",
+        "comment",
 		"reply",
 		"tree"
     ],
+    "homepage": "https://nex.starinc.xyz/",
     "type": "flarum-extension",
     "license": "GPL-3.0-or-later",
     "require": {
@@ -15,6 +16,10 @@
         "flarum/mentions": "*"
     },
     "authors": [
+        {
+            "name": "SuperSonic",
+            "email": "supersonic@livemail.tw"
+        },
         {
             "name": "Charlie K",
             "email": "charlie.k@redevs.org",
