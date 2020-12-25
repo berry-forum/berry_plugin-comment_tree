@@ -152,13 +152,13 @@ app.initializers.add('kyrne-everygreen', () => {
     items.add('postMentioned', {
       name: 'postMentioned',
       icon: 'fas fa-reply',
-      label: app.translator.trans('flarum-mentions.forum.settings.notify_post_mentioned_label')
+      label: app.translator.trans('starinc-nex_mentions.forum.settings.notify_post_mentioned_label')
     });
 
     items.add('userMentioned', {
       name: 'userMentioned',
       icon: 'fas fa-at',
-      label: app.translator.trans('flarum-mentions.forum.settings.notify_user_mentioned_label')
+      label: app.translator.trans('starinc-nex_mentions.forum.settings.notify_user_mentioned_label')
     });
   });
 
@@ -170,7 +170,7 @@ app.initializers.add('kyrne-everygreen', () => {
       LinkButton.component({
         href: app.route('user.mentions', {username: user.username()}),
         name: 'mentions',
-        children: [app.translator.trans('flarum-mentions.forum.user.mentions_link')],
+        children: [app.translator.trans('starinc-nex_mentions.forum.user.mentions_link')],
         icon: 'fas fa-at'
       }),
       80
