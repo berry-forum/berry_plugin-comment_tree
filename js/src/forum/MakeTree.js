@@ -43,7 +43,7 @@ export default function MakeTree() {
       const count = this.props.post.replyCount() - app.cache.trees[id].length + app.cache.pushTree[id];
       let include = 'discussion,user,user.groups,hiddenUser,editedUser,';
       if (app.initializers.has('fof-gamification')) {
-        include += 'user.ranks,upvotes,';
+        include += 'user.ranks,';
       }
       if (app.initializers.has('fof/reactions')) {
         include += 'reactions';
