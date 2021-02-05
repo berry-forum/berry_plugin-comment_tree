@@ -163,12 +163,12 @@ app.initializers.add('kyrne-everygreen', () => {
   });
 
   // Add mentions tab in user profile
-  app.routes['user.mentions'] = {path: '/u/:username/mentions', component: MentionsUserPage.component()};
+  app.routes['user.mentions'] = {path: '/u/:uid/mentions', component: MentionsUserPage.component()};
   extend(UserPage.prototype, 'navItems', function (items) {
     const user = this.user;
     items.add('mentions',
       LinkButton.component({
-        href: app.route('user.mentions', {username: user.username()}),
+        href: app.route('user.mentions', {uid: user.id()}),
         name: 'mentions',
         children: [app.translator.trans('starinc-nex_comment-tree.forum.user.mentions_link')],
         icon: 'fas fa-at'
